@@ -41,7 +41,7 @@ kdv <- function(longitude, latitude, bandwidth_s = 1000.0, row_pixels = 800, col
 #'
 #' @examples
 #' data(hk)
-#' resSTKDV <- stkdv(hk$lon,hk$lat,hk$t, 1000.0, 6.0, 800, 640, 32)
+#' resSTKDV <- stkdv(hk$lon, hk$lat, hk$t, 1000.0, 6.0, 800, 640, 32)
 stkdv <- function(longitude, latitude, time, bandwidth_s = 1000.0 , bandwidth_t = 6.0, row_pixels = 800, col_pixels = 640, t_pixels = 32) {
   data <- data.frame(latitude, longitude, time)
   colnames(data) <- c("lat", "lon", "t")
@@ -78,7 +78,7 @@ plotKDV <- function(data) {
 #'
 #' @examples
 #' data(hk)
-#' resSTKDV <- stkdv(hk$lon,hk$lat,hk$t, 1000.0, 6.0, 800, 640, 32)
+#' resSTKDV <- stkdv(hk$lon, hk$lat, hk$t, 1000.0, 6.0, 800, 640, 32)
 #' plotSTKDV(resSTKDV)
 plotSTKDV <- function(data) {
   data_list <- split(data, data$t)

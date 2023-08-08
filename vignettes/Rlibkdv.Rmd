@@ -24,15 +24,15 @@ data(hk)
 
 **Kernel Density Visualization**:
 
-```{r}
-resKDV <-kdv(hk$lon, hk$lat, 1000.0, 800, 640)
+```{r example1}
+resKDV <- kdv(hk$lon, hk$lat, 1000.0, 800, 640)
 plotKDV(resKDV)
 ```
 
 
 **Spatiotemporal Kernel Density Visualization**:
 
-```{r}
-resSTKDV <- stkdv(hk$lon,hk$lat,hk$t, 1000.0, 6.0, 800, 640, 32)
-plotSTKDV(resSTKDV)
+```{r exemple2}
+# resSTKDV <- stkdv(hk$lon, hk$lat, hk$t, 1000.0, 6.0, 800, 640, 1)
+# plotSTKDV(resSTKDV)
 ```

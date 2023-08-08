@@ -14,6 +14,6 @@ Plot STKDV
 }
 \examples{
 data(hk)
-resSTKDV <- stkdv(hk$lon,hk$lat,hk$t, 1000.0, 6.0, 800, 640, 32)
+resSTKDV <- stkdv(hk$lon, hk$lat, hk$t, 1000.0, 6.0, 800, 640, 32)
 plotSTKDV(resSTKDV)
 }
