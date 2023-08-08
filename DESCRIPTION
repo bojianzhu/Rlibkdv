@@ -24,8 +24,13 @@ Imports:
     leaflet,
     raster,
     reticulate
+Config/reticulate: list( packages = list( list(package = "pandas"),
+        list(package = "numpy") ) )
 Depends: 
     magrittr,
     R (>= 2.10)
 Suggests: 
+    knitr,
+    rmarkdown,
     sf
+VignetteBuilder: knitr
