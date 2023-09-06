@@ -9,11 +9,16 @@ plotSTKDV(data)
 \arguments{
 \item{data}{result of stkdv}
 }
+\value{
+No return value, called to plot STKDV heatmap
+}
 \description{
 Plot STKDV
 }
 \examples{
+\donttest{
 data(hk)
-resSTKDV <- stkdv(hk$lon, hk$lat, hk$t, 1000.0, 6.0, 800, 640, 32)
+resSTKDV <- stkdv(hk$lon, hk$lat, hk$t, 1000, 6, 800, 640, 32)
 plotSTKDV(resSTKDV)
+}
 }

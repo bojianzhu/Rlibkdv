@@ -39,6 +39,8 @@ stkdv result
 Efficient and accurate spatiotemporal kernel density visualization.
 }
 \examples{
+\donttest{
 data(hk)
-resSTKDV <- stkdv(hk$lon, hk$lat, hk$t, 1000.0, 6.0, 800, 640, 32)
+resSTKDV <- stkdv(hk$lon, hk$lat, hk$t, 1000, 6, 800, 640, 32)
+}
 }

@@ -30,6 +30,8 @@ kdv result
 Efficient and accurate kernel density visualization.
 }
 \examples{
+\donttest{
 data(hk)
-resKDV <-kdv(hk$lon, hk$lat, 1000.0, 800, 640)
+resKDV <- kdv(hk$lon, hk$lat, 1000, 800 ,640)
+}
 }

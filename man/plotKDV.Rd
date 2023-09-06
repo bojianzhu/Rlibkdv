@@ -9,11 +9,16 @@ plotKDV(data)
 \arguments{
 \item{data}{result of kdv}
 }
+\value{
+No return value, called to plot KDV heatmap
+}
 \description{
 Plot KDV
 }
 \examples{
+\donttest{
 data(hk)
-resKDV <-kdv(hk$lon, hk$lat, 1000.0, 800, 640)
+resKDV <- kdv(hk$lon, hk$lat, 1000, 800 ,640)
 plotKDV(resKDV)
+}
 }
