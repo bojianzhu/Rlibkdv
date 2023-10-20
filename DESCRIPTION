@@ -35,13 +35,13 @@ Imports:
     leaflet,
     raster,
     magrittr,
-    Rcpp
+    Rcpp,
+    sf
 Depends: 
     R (>= 2.10)
 Suggests: 
     knitr,
-    rmarkdown,
-    sf
+    rmarkdown
 VignetteBuilder: knitr
 LinkingTo: 
     Rcpp

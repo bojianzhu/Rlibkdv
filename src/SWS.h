@@ -9,7 +9,7 @@ struct index_time_pair
 {
 	int index;
 	double time;
-	bool operator<(const index_time_pair& pair) { return time < pair.time; }
+	bool operator<(const index_time_pair& pair) const { return time < pair.time; }
 };
 
 struct win_status

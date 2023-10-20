@@ -1,7 +1,7 @@
 # Rlibkdv
 
-[![](https://www.r-pkg.org/badges/version/Rlibkdv?color=blue)](https://cran.r-project.org/package=spNetwork)
-[![](http://cranlogs.r-pkg.org/badges/grand-total/Rlibkdv?color=blue)](https://cran.r-project.org/package=spNetwork)
+[![](https://www.r-pkg.org/badges/version/Rlibkdv?color=blue)](https://cran.r-project.org/package=Rlibkdv)
+[![](http://cranlogs.r-pkg.org/badges/grand-total/Rlibkdv?color=blue)](https://cran.r-project.org/package=Rlibkdv)
 
 The goal of Rlibkdv is to provide a versatile kernel density visualization R package for geospatial analytics.
 

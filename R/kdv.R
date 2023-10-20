@@ -118,6 +118,7 @@ stkdv <- function(longitude, latitude, time, bandwidth_s=1000, bandwidth_t=6, ro
 #' @export
 #' @import leaflet
 #' @import raster
+#' @import sf
 #' @importFrom magrittr %>%
 #' @examples
 #' \donttest{
@@ -128,7 +129,7 @@ stkdv <- function(longitude, latitude, time, bandwidth_s=1000, bandwidth_t=6, ro
 
 plotKDV <- function(data) {
   r <- raster::rasterFromXYZ(data)
-  raster::crs(r) <- "EPSG:4326"
+  raster::crs(r) <- "+proj=longlat +datum=WGS84 +no_defs"
   pal <- leaflet::colorNumeric("Reds", raster::values(r), na.color = "transparent")
   leaflet::leaflet() %>%
     leaflet::addTiles() %>%
@@ -142,6 +143,7 @@ plotKDV <- function(data) {
 #' @export
 #' @import leaflet
 #' @import raster
+#' @import sf
 #' @importFrom magrittr %>%
 #' @examples
 #' \donttest{
@@ -151,13 +153,13 @@ plotKDV <- function(data) {
 #' }
 
 plotSTKDV <- function(data) {
+  data$lon <- round(data$lon, 3)
+  data$lat <- round(data$lat, 3)
   data_list <- split(data, data$t)
   names(data_list) <- format(as.POSIXct(as.numeric(names(data_list)), origin = "1970-01-01"), "%Y-%m-%d %H-%M-%S")
   r_list <- lapply(data_list, function(data) {
-    data$lon <- round(data$lon, 3)
-    data$lat <- round(data$lat, 3)
     r <- raster::rasterFromXYZ(data[, c("lon", "lat", "val")])
-    raster::crs(r) <- "EPSG:4326"
+    raster::crs(r) <- "+proj=longlat +datum=WGS84 +no_defs"
     return(r)
   })
   domain = range(data$val, na.rm = TRUE)
